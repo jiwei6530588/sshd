@@ -17,11 +17,6 @@ RUN sed -ri 's/UsePAM yes/#UsePAM no/g' /etc/ssh/sshd_config && \
     sed -ri 's/^#?PermitRootLogin\s+.*/PermitRootLogin yes/' /etc/ssh/sshd_config
 #复制配置文件到相应位置
 
-#RUN mkdir -p /root/.ssh && \
-#    chmod 700 /root/.ssh && \
-#    chmod 600 /root/.ssh/* && \
-#    chown -R root:root /root/.ssh 
-#ADD authorized_keys /root/.ssh/authorized_keys
 
 #开放端口
 EXPOSE 22
